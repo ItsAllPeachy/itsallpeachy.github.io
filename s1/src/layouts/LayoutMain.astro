@@ -3,7 +3,6 @@ import '../styles/global.css';
 import Navbar from '../components/Navbar';
 import Pretty from '../components/Pretty';
 import GridBG from '../components/GridBG';
-import { ClientRouter } from "astro:transitions";
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +13,6 @@ import { ClientRouter } from "astro:transitions";
         <title>Jords</title>
     </head>
     <body class='bg-black'>
-        <ClientRouter />
         <GridBG client:load />
         <Navbar client:only />
         <Pretty client:only />
