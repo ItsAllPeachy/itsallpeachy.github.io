@@ -42,6 +42,7 @@ function NavbarPC(){
         active_button.classList.add(
           "text-white",
           "border-b-2", 
+          "drop-shadow-[0_0_10px_#38bdf8]",
           "box-border",
           "font-extrabold"
         );
@@ -60,6 +61,7 @@ function NavbarPC(){
   const navbarmobile_style = ("flex mx-[0.5rem] text-center p-1 rounded-xs")
   const mobile_navbar = (
     <section className="z-999999 fixed bottom-10 flex justify-center w-full">
+
       <div id="navbar_center_content"           className="flex items-center text-[#cdd6f4] justify-center bg-black/30 backdrop-blur-md font-semibold rounded-3xl border-2 border-[#333] shadow-md p-2 py-2.5">
         <a href="/"          id="btn-home"      className={navbarmobile_style}> HOME     </a>
         <a href="/about"     id="btn-about"     className={navbarmobile_style}> ABOUT    </a>
