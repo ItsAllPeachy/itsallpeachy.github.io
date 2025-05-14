@@ -122,6 +122,9 @@ function Skills() {
     <>
       <section className="flex flex-col sm:flex-row gap-8 items-start" id="POES">
         <div className="flex flex-col space-y-4 flex-1">
+        <h1 className="font-extrabold text-transparent bg-gradient-to-b from-gray-200 to-gray-400 leading-tight tracking-tight bg-clip-text text-[clamp(2rem,6vw,3rem)]">
+          Skills: 
+        </h1>  
           {skillCategories.map(({ title, items }) => (
             <div className="flex flex-col sm:flex-row sm:items-center" key={title}>
               <span className="w-full text-sm font-bold text-black/80 dark:text-white/80 sm:w-48">{title}</span>
@@ -136,7 +139,7 @@ function Skills() {
             </div>
           ))}
         </div>
-        <div className="flex justify-center mr-30 items-center h-full">
+        <div className="flex items-center self-center mr-30">
           <ImageSlider />
         </div>
       </section>

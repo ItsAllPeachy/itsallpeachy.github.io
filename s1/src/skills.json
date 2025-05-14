@@ -1,8 +1,8 @@
 {
     "skills": {
     "programming_languages": ["JavaScript", "TypeScript", "PHP", "Python", "C++", "C", "Bash" ],
-    "frameworks": [ "Astro", "Vue.js", "ReactJS" ],
-    "databases": ["MySQL", "PostgreSQL", "SQLite"],
-    "tools": ["Docker", "Git"]
+    "frameworks": [ "Astro", "Vue.js", "ReactJS", "TailwindCSS", "Bootstrap", "Jekyll"],
+    "databases": ["MySQL", "PostgreSQL", "SQLite", "TypeORM"],
+    "tools": ["Docker", "Git", "NMAP", "NPM", "NodeJS", "Apache-httpd2.0-2.4.63"]
   }
 }

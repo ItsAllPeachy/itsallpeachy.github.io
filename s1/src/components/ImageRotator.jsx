@@ -11,7 +11,6 @@ const ImageSlider = () => {
     '/src/assets/langs/mysql.svg',
     '/src/assets/langs/php.svg',
     '/src/assets/langs/postgresql.svg',
-    '/src/assets/langs/python.svg',
     '/src/assets/langs/react.svg',
     '/src/assets/langs/sqlite.svg',
     '/src/assets/langs/typescript.svg',
