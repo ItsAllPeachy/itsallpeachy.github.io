@@ -1,8 +1,8 @@
 {
     "skills": {
-    "programming_languages": ["JavaScript", "TypeScript", "Python", "C++", "C" ],
+    "programming_languages": ["JavaScript", "TypeScript", "PHP", "Python", "C++", "C", "Bash" ],
     "frameworks": [ "Astro", "Vue.js", "ReactJS" ],
-    "databases": ["MySQL", "PostgreSQL", "Redis"],
+    "databases": ["MySQL", "PostgreSQL", "SQLite"],
     "tools": ["Docker", "Git"]
   }
 }

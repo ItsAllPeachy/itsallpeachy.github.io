@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { skills } from "../skills.json";
+import ImageSlider from "./ImageRotator";
 const img_class_1 = "border-2 border-[#cdd6f4] rounded-3xl shadow-[3px_3px_6px_rgba(255,255,255,0.25)]";
 
 function About() {
@@ -116,18 +117,36 @@ function Skills() {
     { title: "Database", items: databases },
     { title: "Tools", items: tools },
   ];
-
+  
   const component_skills = (
-    <h1 className="text-white">
-      Skills 
-    </h1>
+    <>
+      <section className="flex flex-col sm:flex-row gap-8 items-start" id="POES">
+        <div className="flex flex-col space-y-4 flex-1">
+          {skillCategories.map(({ title, items }) => (
+            <div className="flex flex-col sm:flex-row sm:items-center" key={title}>
+              <span className="w-full text-sm font-bold text-black/80 dark:text-white/80 sm:w-48">{title}</span>
+              <span className="hidden px-2 sm:inline-block">:</span>
+              <ul className="flex flex-1 flex-wrap gap-2">
+                {items.map((item) => (
+                  <li key={item} className="inline-flex items-center rounded-md border border-black/25 bg-neutral-200/50 px-2 py-1 text-xs text-black/80 dark:border-white/25 dark:bg-neutral-800/50 dark:text-white/80">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <div className="flex justify-center mr-30 items-center h-full">
+          <ImageSlider />
+        </div>
+      </section>
+    </>
   );
   return component_skills;
 }
 
 const Redarmy = () => {
   const [index, setIndex] = useState(0);
-
   const components = [
     <About />,
     <Goals />,
@@ -146,18 +165,16 @@ const Redarmy = () => {
 
   const menu = (
     <section className="flex justify-center items-center min-h-screen w-full px-4 py-8">
-      <div className="flex items-center w-full max-w-[60%]">
-        <button onClick={goLeft} className="bg-transparent p-2 rounded-full transition-colors duration-500 ease hover:bg-[#333] border-2 border-black">
+      <div className="flex items-center w-full max-w-[70%]">
+        <button onClick={goLeft} className="bg-transparent p-2 rounded-full transition-colors duration-500 ease hover:bg-[#333] border-2 border-white">
           <img height="48" width="48" src="/src/assets/action-paging-prev-svgrepo-com.svg" />
         </button>
-
         <div className="flex-1 shadow-[3px_3px_6px_rgba(255,255,255,0.25)] bg-transparent border-2 border-[#cdd6f4] backdrop-blur-md px-4 sm:px-6 py-6 sm:py-8 rounded-2xl mx-4 flex flex-col items-center justify-center gap-6">
           <div className="text-white w-full text-center space-y-4">
             {components[index]}
           </div>
         </div>
-
-        <button onClick={goRight} className="bg-transparent p-2 rounded-full transition-colors duration-500 ease hover:bg-[#333] border-2 border-black">
+        <button onClick={goRight} className="bg-transparent p-2 rounded-full transition-colors duration-500 ease hover:bg-[#333] border-2 border-white">
           <img height="48" width="48" src="/src/assets/next-svgrepo-com.svg" />
         </button>
       </div>
@@ -165,6 +182,4 @@ const Redarmy = () => {
   );
   return menu;
 };
-
-
 export default Redarmy;
