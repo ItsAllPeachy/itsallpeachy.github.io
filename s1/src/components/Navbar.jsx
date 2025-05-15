@@ -56,11 +56,12 @@ function NavbarPC(){
       }
     }
   }, [current_page]);
+  console.log(current_page)
 
 
   const navbarmobile_style = ("flex mx-[0.5rem] text-center p-1 rounded-xs")
   const mobile_navbar = (
-    <section className="z-999999 fixed bottom-10 flex justify-center w-full">
+    <section className="z-999999 fixed bottom-10 text-white flex justify-center w-full">
 
       <div id="navbar_center_content"           className="flex items-center text-[#cdd6f4] justify-center bg-black/30 backdrop-blur-md font-semibold rounded-3xl border-2 border-[#333] shadow-md p-2 py-2.5">
         <a href="/"          id="btn-home"      className={navbarmobile_style}> HOME     </a>

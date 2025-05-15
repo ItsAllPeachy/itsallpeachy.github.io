@@ -91,22 +91,21 @@ function TabbedContent() {
 
 function Goals() {
   const component_goals = (
-
-
-    <div>
+    <div className="max-w-[960px] w-full mx-auto px-4">
       <h1 className="font-extrabold text-transparent bg-gradient-to-b from-gray-200 to-gray-400 leading-tight tracking-tight bg-clip-text text-[clamp(2rem,6vw,3rem)]">
         Goals  
       </h1> 
       <TabbedContent />
       <div className="flex justify-center items-center bg-transparent border-2 border-[#cdd6f4] mt-8 space-x-4 rounded-2xl backdrop-blur-md p-4 w-fit mx-auto">
-        <img className={img_class_1} height="128" width="128" src="/src/assets/prolatarianclassic.png"></img>
-        <img className={img_class_1} height="128" width="128" src="/src/assets/profile.jpeg"></img>
-        <img className={img_class_1} height="128" width="128" src="/src/assets/prolatarianclassic2.png"></img>
+        <img className={img_class_1} height="128" width="128" src="/src/assets/prolatarianclassic.png" />
+        <img className={img_class_1} height="128" width="128" src="/src/assets/profile.jpeg" />
+        <img className={img_class_1} height="128" width="128" src="/src/assets/prolatarianclassic2.png" />
       </div>
     </div>
   );
   return component_goals;
 }
+
 
 function Skills() {
   const { programming_languages, frameworks, databases, tools } = skills;
