@@ -61,7 +61,7 @@ function NavbarPC(){
 
   const navbarmobile_style = ("flex mx-[0.5rem] text-center p-1 rounded-xs")
   const mobile_navbar = (
-    <section className="z-999999 fixed bottom-10 text-white flex justify-center w-full">
+    <section className="z-999999 fixed bottom-2 text-white flex justify-center w-full">
 
       <div id="navbar_center_content"           className="flex items-center text-[#cdd6f4] justify-center bg-black/30 backdrop-blur-md font-semibold rounded-3xl border-2 border-[#333] shadow-md p-2 py-2.5">
         <a href="/"          id="btn-home"      className={navbarmobile_style}> HOME     </a>
@@ -90,7 +90,7 @@ function NavbarPC(){
           </svg>
         </a>
       </div>
-      <div id="navbar_center_content"           className="flex justify-center text-white gap-4"> 
+      <div id="navbar_center_content"           className="flex justify-center text-white gap-2"> 
         <a href="/"          id="btn-home"      className={`${navbarpc_style} bg-transparent border-2 border-[#080808] backdrop-blur-md`}> HOME </a>
         <a href="/about"     id="btn-about"     className={`${navbarpc_style} bg-transparent border-2 border-[#080808] backdrop-blur-md`}> ABOUT </a>
         <a href="/projects"  id="btn-projects"  className={`${navbarpc_style} bg-transparent border-2 border-[#080808] backdrop-blur-md`}> PROJECTS </a>
