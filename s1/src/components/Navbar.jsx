@@ -66,18 +66,19 @@ function NavbarPC(){
       <div id="navbar_center_content"           className="flex items-center text-[#cdd6f4] justify-center bg-black/30 backdrop-blur-md font-semibold rounded-3xl border-2 border-[#333] shadow-md p-2 py-2.5">
         <a href="/"          id="btn-home"      className={navbarmobile_style}> HOME     </a>
         <a href="/about"     id="btn-about"     className={navbarmobile_style}> ABOUT    </a>
-        <a href="/projects"  id="btn-projects"  className={navbarmobile_style}> PROJECTS </a>
         <a href="/blog/"     id="btn-blog"      className={navbarmobile_style}> BLOG     </a>
       </div>
     </section>
   )
+  const [open, setOpen] = useState(false)
 
   const navbarpc_style = ("transition-colors duration-500 ease hover:bg-[#333] bg-black pt-2 pb-2 pr-4 pl-4 rounded-3xl")
   const pc_navbar = (
     <section className="z-2000 mt-2 ">
       <div id="navbar_left_content" >
-        <a className={` ${navbarpc_style} font-semibold text-white absolute left-5 rounded-2xl border-2 border-[#333] bg-transparent backdrop-blur-md`}> PEACH </a>
+        <a href="https://linktr.ee/ItsAllPeachy" target="_blank" className={` ${navbarpc_style} font-semibold text-white absolute left-5 rounded-2xl border-2 border-[#333] bg-transparent backdrop-blur-md`}> PEACH </a>
       </div>
+
       <div className="absolute top-1 right-2 flex gap-2 border-2 border-[#333] p-2 rounded-2xl bg-transparent backdrop-blur-md">
         <a href="https://github.com/ItsAllPeachy" target="_blank" id="btn-github">
           <svg fill="white" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0 0 64 64">
@@ -93,7 +94,6 @@ function NavbarPC(){
       <div id="navbar_center_content"           className="flex justify-center text-white gap-2"> 
         <a href="/"          id="btn-home"      className={`${navbarpc_style} bg-transparent border-2 border-[#080808] backdrop-blur-md`}> HOME </a>
         <a href="/about"     id="btn-about"     className={`${navbarpc_style} bg-transparent border-2 border-[#080808] backdrop-blur-md`}> ABOUT </a>
-        <a href="/projects"  id="btn-projects"  className={`${navbarpc_style} bg-transparent border-2 border-[#080808] backdrop-blur-md`}> PROJECTS </a>
         <a href="/blog/"     id="btn-blog"      className={`${navbarpc_style} bg-transparent border-2 border-[#080808] backdrop-blur-md`}> BLOG </a>
       </div>
     </section>
