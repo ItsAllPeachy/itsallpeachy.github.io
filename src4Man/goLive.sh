@@ -30,11 +30,14 @@ goLive() {
   }
   echo "Running build..."
   if npm run build; then
-    echo "Build successful, deploying with Surge..."
+    echo "Build successful, repositioning /src/ into /dist/..."
+    if cp -r src dist; then
+      echo "/src/ moved"
+    fi
+    echo "going live with surge"
     if surge dist/ $domain; then
       echo "Surge deployment successful"
       jq --arg domain "$domain" '.domain = $domain' "$cacheDir" >"${cacheDir}.tmp" && mv "${cacheDir}.tmp" "$cacheDir"
-
     else
       echo "Surge deployment failed"
     fi
