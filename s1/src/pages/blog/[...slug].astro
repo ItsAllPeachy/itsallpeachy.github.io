@@ -9,9 +9,6 @@ import Debug from '../../components/debug';
 import Navbar from '../../components/Navbar';
 import Pretty from '../../components/Pretty';
 import GridBG from '../../components/GridBG';
-
-const abc = '⊹₊ ˚‧︵‿₊୨ ᰔ Finished blog post; (finished fact checking and grammar checking) Redecorated blog section ᰔ ୧₊‿︵‧ ˚ ₊⊹'
-
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
 	return posts.map((post) => ({
@@ -20,14 +17,12 @@ export async function getStaticPaths() {
 	}));
 }
 type Props = CollectionEntry<'blog'>;
-
 const post = Astro.props;
 const { Content } = await render(post);
 ---
-<meta charset="UTF-8" />
-<div class="absolute top-0 w-full bg-transparent backdrop-blur-md">a
-	{import.meta.env.DEV && <Debug client:only/>}
-	<Navbar client:only />
+
+<div>
+	<!-- {import.meta.env.DEV && <Debug client:only/>} -->
 	<BlogPost {...post.data}>
 		<Content />
 	</BlogPost>
