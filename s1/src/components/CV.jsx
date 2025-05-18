@@ -109,8 +109,6 @@ function Goals() {
             { name: "Promote Social and Economic Equality", content: "I would like to embrace the principles of socialism both in my professional life by advocating for systems that empower all people, ensuring access to the resources and opportunities needed for people to collectively thrive; As a nation.", img: "/src/assets/about/PSEE-1.png", imgclass: "p-1 mt-10 rounded-2xl h-100 w-100 border-2 mx-auto" }
         ];
           
-          
-      
         if (screenWidth > 560) {
             return (
                 <div className="w-full p-4 mx-auto mt-8">
@@ -160,40 +158,55 @@ function AboutMeContent(){
 }
 
 function ContentDisplay(){
-    const [array_position, set_array_position] = useState(0);
-    const menus = [<AboutMeContent />, <Goals />, <Skills />];
+  const [array_position, set_array_position] = useState(0);
+  const [screen_width, set_screen_width] = useState(window.innerWidth);
+  const menus = [<AboutMeContent />, <Goals />, <Skills />];
 
-    const button_style_1 = "border-2 border-[#333] rounded-full p-2 hover:border-[#fff] hover:bg-[#333] transform hover:scale-108 transition duration-500 ease-in-out";
+  useEffect(() => {
+      const handleResize = () => set_screen_width(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-    const go_forward = () => set_array_position((prev) => (prev + 1) % menus.length);
-    const go_backward = () => set_array_position((prev) => (prev - 1 + menus.length) % menus.length);
+  const go_forward = () => set_array_position((prev) => (prev + 1) % menus.length);
+  const go_backward = () => set_array_position((prev) => (prev - 1 + menus.length) % menus.length);
+  const button_style_1 = "border-2 border-[#333] rounded-full p-2 hover:border-[#fff] hover:bg-[#333] transform hover:scale-108 transition duration-500 ease-in-out";
 
-    return ( 
-        <section className="flex mt-[5%] items-center justify-center text-white">
-            <div className="w-[90%] max-w-[800px] min-h-[3rem] border-2 border-[#333] rounded-2xl bg-transparent backdrop-blur-md">
-                <div id="cv-about-me"> 
-                    <div id="cv-about-me-content-injection">
-                        {menus[array_position]}
-                    </div>
-                    <hr className="border-1 border-[#333]" />
-                    <div className="p-2 relative flex justify-center items-center w-full max-w-[900px] mx-auto">
-                        <button onClick={go_backward} className="absolute left-[1%]">
-                            <img height="58" width="58" className={button_style_1} src="/src/assets/op-prev.svg" />
-                        </button>
-                        <div id="cv-about-me-buttons" className="flex gap-[5%]">
-                            <a href="mailto:filler@email.com?subject=My%20Subject&body=My%20Body"><img height="58" width="58" className={button_style_1} src="/src/assets/email.svg" /></a>
-                            <button><img height="58" width="58" className={button_style_1} src="/src/assets/github.svg" /></button>
-                            <button><img height="58" width="58" className={button_style_1} src="/src/assets/instagram.svg" /></button>
-                        </div>
-                        <button onClick={go_forward} className="absolute mx-auto right-[1%]">
-                            <img height="58" width="58" className={button_style_1} src="/src/assets/op-next.svg" />
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+  return ( 
+      <section className="flex mt-[5%] items-center justify-center text-white">
+          <div className="w-[90%] max-w-[800px] min-h-[3rem] border-2 border-[#333] rounded-2xl bg-transparent backdrop-blur-md">
+              <div id="cv-about-me"> 
+                  <div id="cv-about-me-content-injection">
+                      {menus[array_position]}
+                  </div>
+                  <hr className="border-1 border-[#333]" />
+                  <div className="p-2 relative flex justify-center items-center w-full min-h-[70px] max-w-[900px] mx-auto">
+                      <button onClick={go_forward} className="absolute left-[1%]">
+                          <img height="58" width="58" className={button_style_1} src="/src/assets/op-prev.svg" />
+                      </button>
+                      {screen_width >= 356 && (
+                          <div id="cv-about-me-buttons" className="flex gap-[5%]">
+                              <a href="mailto:filler@email.com?subject=My%20Subject&body=My%20Body">
+                                  <img height="58" width="58" className={button_style_1} src="/src/assets/email.svg" />
+                              </a>
+                              <a href="https://github.com/ItsAllPeachy" target="_blank" rel="noreferrer">
+                                  <img height="58" width="58" className={button_style_1} src="/src/assets/github.svg" />
+                              </a>
+                              <a href="https://www.instagram.com/jordang.astro/?hl=en" target="_blank" rel="noreferrer">
+                                  <img height="58" width="58" className={button_style_1} src="/src/assets/instagram.svg" />
+                              </a>
+                          </div>
+                      )}
+                      <button onClick={() => { go_forward(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="absolute mx-auto right-[1%]">
+                          <img height="58" width="58" className={button_style_1} src="/src/assets/op-next.svg" />
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </section>
+  );
 }
+
 
 
 function RedArmy(){

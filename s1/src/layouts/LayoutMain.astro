@@ -3,7 +3,7 @@ import '../styles/global.css';
 import Navbar from '../components/Navbar';
 import Pretty from '../components/Pretty';
 import GridBG from '../components/GridBG';
-import POES from '../components/ImageRotator';
+import Debug from '../components/debug';
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +14,7 @@ import POES from '../components/ImageRotator';
         <title>Jords</title>
     </head>
     <body class='bg-black'>
+        {import.meta.env.DEV && <Debug client:only/>}
         <GridBG client:load />
         <Navbar client:only />
         <Pretty client:only />

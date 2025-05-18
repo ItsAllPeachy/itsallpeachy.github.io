@@ -1,8 +1,8 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 // import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import Debug from '../components/debug';
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -28,7 +28,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				box-shadow: var(--box-shadow);
 			}
 			.prose {
-				width: 720px;
+				width: 1020px;
 				max-width: calc(100% - 2em);
 				margin: auto;
 				padding: 1em;
@@ -54,14 +54,16 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	</head>
 
 	<body>
+		{import.meta.env.DEV && <Debug client:only/>}
 		<main>
 			<article>
-				<div class="hero-image">
-					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
+				<div class="hero-image mt-10 mb-10 rounded-2xl">
+					{heroImage && <img class="border-2 p-1 border-[#333]" width={1020} height={510} src={heroImage} alt="" />}
 				</div>
-				<div class="prose">
+				<div class="prose border-2 p-1 border-[#333] rounded-2xl">
+					<hr class="mb-10"/>
 					<div class="title">
-						<div class="date">
+						<div class="date underline font-semibold">
 							<FormattedDate date={pubDate} />
 							{
 								updatedDate && (
@@ -71,13 +73,12 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 								)
 							}
 						</div>
-						<h1>{title}</h1>
+						<h1 class="justify-center p-4 flex font-medium w-fit text-transparent bg-gradient-to-b from-gray-200 to-gray-400 leading-tight tracking-tight bg-clip-text text-[clamp(2rem,6vw,3rem)]">{title}</h1>
 						<hr />
 					</div>
 					<slot />
 				</div>
 			</article>
 		</main>
-		<Footer />
 	</body>
 </html>

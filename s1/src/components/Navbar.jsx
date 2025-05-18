@@ -29,9 +29,9 @@ function NavbarPC(){
     let active = "";
     if (current_page === "/") {
       active = "btn-home";
-    } else if (current_page === "/about") {
+    } else if (["/about", "/about/"].includes(current_page)) {
       active = "btn-about";
-    } else if (current_page === "/projects") {
+    } else if (["/projects", "/projects/"].includes(current_page)) {
       active = "btn-projects";
     } else {
       active = "btn-blog";
