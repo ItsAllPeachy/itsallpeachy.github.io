@@ -109,7 +109,7 @@ function Goals() {
             { name: "Promote Social and Economic Equality", content: "I would like to embrace the principles of socialism both in my professional life by advocating for systems that empower all people, ensuring access to the resources and opportunities needed for people to collectively thrive; As a nation.", img: "/src/assets/about/PSEE-1.png", imgclass: "p-1 mt-10 rounded-2xl h-100 w-100 border-2 mx-auto" }
         ];
           
-        if (screenWidth > 560) {
+        if (screenWidth > 600) {
             return (
                 <div className="w-full p-4 mx-auto mt-8">
                     <div className="flex gap-2 pl-2 pr-2">
