@@ -72,9 +72,9 @@ function NavbarPC(){
   )
   const [open, setOpen] = useState(false)
 
-  const navbarpc_style = ("transition-colors duration-500 ease hover:bg-[#333] bg-black pt-2 pb-2 pr-4 pl-4 rounded-3xl")
+  const navbarpc_style = ("transition-colors duration-500 ease mt-2 hover:bg-[#333] bg-black pt-2 pb-2 pr-4 pl-4 rounded-3xl")
   const pc_navbar = (
-    <section className="z-2000 mt-2 ">
+    <section className="z-2000">
       <div id="navbar_left_content" >
         <a href="https://linktr.ee/ItsAllPeachy" target="_blank" className={` ${navbarpc_style} font-semibold text-white absolute left-5 rounded-2xl border-2 border-[#333] bg-transparent backdrop-blur-md`}> PEACH </a>
       </div>
