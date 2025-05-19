@@ -139,7 +139,7 @@ function Goals() {
 }     
 
 
-
+   
 function AboutMeContent(){
     return (
         <div id="cv-about-me-content">
@@ -150,8 +150,8 @@ function AboutMeContent(){
             <p className="justify-center p-4">
                 I'm a young communist high school student from South Africa with a passion for programming, reading, and writing. Right now, I'm diving into web development while learning some basic Penetration testing. When I'm not writing admittedly unusable code, or writing in general, you will probably find me lost in a book. I like to think of myself as someone curious and always excited to learn something new!
             </p>
-            <div className="flex mb-5 mt-5 justify-center">
-                <img className="rounded-2xl p-1 border-2 " src="/src/assets/profile.jpeg" width="340" height="340" />
+            <div className="flex p-1 mb-5 mt-5 justify-center">
+                <img className="rounded-2xl p-1 border-2 border-[#333] " src="/src/assets/profile.jpeg" width="340" height="340" />
             </div>
         </div>
     )
