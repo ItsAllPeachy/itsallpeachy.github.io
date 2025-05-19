@@ -26,7 +26,7 @@ const ImageSlider = () => {
   }, []);
   return (
     <div className="w-[160px] h-[160px] flex items-center justify-center border-2 p-4 border-[#cdd6f4] rounded-3xl shadow-[3px_3px_6px_rgba(255,255,255,0.25)]">
-      <img className="object-contain" height="128" width="128" id="POES" src={images[currentImageIndex]} alt="image slider" />
+      <img className="object-contain" height="128" width="128" src={images[currentImageIndex]} alt="image slider" />
     </div>
   );
 };

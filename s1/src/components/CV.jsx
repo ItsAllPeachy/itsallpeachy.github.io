@@ -64,7 +64,7 @@ var array_position = 1;
 function Skills(){
     return(
         <>
-        <section className="flex flex-col sm:flex-row gap-8 items-start" id="POES">
+        <section className="flex flex-col sm:flex-row gap-8 items-start">
           <div className="flex flex-col space-y-4 flex-1">
           <h1 className="font-extrabold text-transparent p-8 bg-gradient-to-b from-gray-200 to-gray-400 leading-tight tracking-tight bg-clip-text text-[clamp(2rem,6vw,3rem)]">
             Skills: 
