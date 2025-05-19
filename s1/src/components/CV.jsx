@@ -173,7 +173,7 @@ function ContentDisplay(){
   const button_style_1 = "border-2 border-[#333] rounded-full p-2 hover:border-[#fff] hover:bg-[#333] transform hover:scale-108 transition duration-500 ease-in-out";
 
   return ( 
-      <section className="flex items-center justify-center text-white pb-[100px">
+      <section className="flex items-center justify-center text-white pb-[100px]">
           <div className="w-[90%] mt-[5%] max-w-[800px] min-h-[3rem] border-2 border-[#333] rounded-2xl bg-transparent backdrop-blur-md">
               <div id="cv-about-me"> 
                   <div id="cv-about-me-content-injection">
