@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 // import BaseHead from '../components/BaseHead.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Debug from '../components/debug';
+import Navbar from '../components/Navbar';
 import Layout from '../layouts/LayoutMain.astro'
 type Props = CollectionEntry<'blog'>['data'];
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
@@ -11,6 +12,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <Layout>
 	<main class="h-full w-full text-white bg-transparent backdrop-blur-md overflow-x-hidden">
 	  <article class="border-2 border-[#333] m-2 rounded-2xl overflow-hidden">
+<Navbar client:only />
 		<div class="hero-image flex justify-center mt-2 p-1"> 
 		  {heroImage && <img class="h-[96%] w-[96%] border-[#333] border-2 rounded-2xl" src={heroImage} alt="" />}
 		</div>
