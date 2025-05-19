@@ -17,7 +17,7 @@ function Content() {
   }, []);
 
   return (
-    <section id="z-2000000 component-content" className="flex justify-center items-center min-h-screen px-4 py-8">
+    <section id="z-2000000 component-content" className="flex justify-center items-center min-h-screen px-4">
       <div id="content-root" className="bg-transparent border-2 border-[#cdd6f4] backdrop-blur-md px-4 sm:px-6 py-6 sm:py-8 rounded-2xl w-full max-w-[94%] md:max-w-[800px] flex flex-col md:flex-row items-center gap-6">
         <div id="content-pfp" className="relative w-full md:w-1/2 h-[250px] sm:h-[300px] md:h-[400px]">
           <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">

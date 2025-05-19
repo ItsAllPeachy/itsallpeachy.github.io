@@ -130,8 +130,8 @@ function Goals() {
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography component="p">{tab.content}</Typography>
-                            <img className={tab.imgclass} src={tab.img} />
-                        </AccordionDetails>
+                            <img className={`${tab.imgclass} w-full h-auto max-w-[600px]`} src={tab.img} />
+                            </AccordionDetails>
                     </Accordion>))}
               </div> 
             );
