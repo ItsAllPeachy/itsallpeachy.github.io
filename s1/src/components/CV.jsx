@@ -174,7 +174,7 @@ function ContentDisplay(){
 
   return ( 
       <section className="flex items-center justify-center text-white">
-          <div className="w-[90%] max-w-[800px] min-h-[3rem] border-2 border-[#333] rounded-2xl bg-transparent backdrop-blur-md">
+          <div className="w-[90%] mt-[5%] max-w-[800px] min-h-[3rem] border-2 border-[#333] rounded-2xl bg-transparent backdrop-blur-md">
               <div id="cv-about-me"> 
                   <div id="cv-about-me-content-injection">
                       {menus[array_position]}
@@ -206,9 +206,6 @@ function ContentDisplay(){
       </section>
   );
 }
-
-
-
 function RedArmy(){
     return <ContentDisplay />
 }export default RedArmy
