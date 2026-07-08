@@ -1,0 +1,4 @@
+node_modules/
+comments.db
+comments.db-wal
+comments.db-shm
